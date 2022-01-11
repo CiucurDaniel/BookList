@@ -1,0 +1,35 @@
+# This workflow will build the app on every push
+
+name: FlutterCI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    
+    # Setup the flutter environment.
+    - uses: subosito/flutter-action@v1
+      with:
+        channel: 'stable' # 'dev', 'alpha', default to: 'stable'
+    
+    # Get flutter dependencies.
+    - run: flutter pub get
+    
+    # Check for any formatting issues in the code.
+    - run: flutter format . --set-exit-if-changed 
+    
+    # Statically analyze the Dart code for any errors.
+    - run: flutter analyze .
