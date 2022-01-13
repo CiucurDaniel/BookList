@@ -11,7 +11,7 @@ class DatabaseHelper {
 
   static Database? _db;
 
-  Future<Database> _getDb() async {
+  Future<Database> getDb() async {
     return _db ??= await _initDb();
   }
 
