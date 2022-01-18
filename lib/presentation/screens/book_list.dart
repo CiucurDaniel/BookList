@@ -12,45 +12,42 @@ class BookList extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          children: <Widget>[
-            SizedBox(
-              width: double.infinity,
-              child: Card(
-                elevation: 8.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const <Widget>[
-                      Text('Book 1'),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text('Author 1'),
-                    ],
-                  ),
+          children: const <Widget>[
+            Card(
+              elevation: 8.0,
+              child: ListTile(
+                leading: Icon(
+                  Icons.menu_book,
+                  color: Colors.pink,
                 ),
+                title: Text('Book 1'),
+                subtitle: Text('Author 1'),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 8.0,
             ),
-            SizedBox(
-              width: double.infinity,
-              child: Card(
-                elevation: 8.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const <Widget>[
-                      Text('Book 2'),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text('Author 2'),
-                    ],
-                  ),
-                ),
+            Card(
+              elevation: 8.0,
+              child: ListTile(
+                leading: Icon(Icons.menu_book),
+                title: Text('Book 2'),
+                subtitle: Text('Author 2'),
               ),
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            Card(
+              elevation: 8.0,
+              child: ListTile(
+                leading: Icon(Icons.menu_book),
+                title: Text('Book 3'),
+                subtitle: Text('Author 3'),
+              ),
+            ),
+            SizedBox(
+              height: 8.0,
             ),
           ],
         ),
