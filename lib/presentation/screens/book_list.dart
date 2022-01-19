@@ -8,6 +8,7 @@ class BookList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Book list'),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
