@@ -5,6 +5,12 @@ class ReadingStats extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Book list'),
+        centerTitle: true,
+      ),
+      body: Container(),
+    );
   }
 }
