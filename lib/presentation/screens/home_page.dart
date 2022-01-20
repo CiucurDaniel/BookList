@@ -1,3 +1,4 @@
+import 'package:book_list/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'book_list.dart';
 
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
         title: const Text('Book list'),
         centerTitle: true,
       ),
-      body: const BookList(),
+      body: const ReadingStats(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: const FloatingActionButton(
         child: Icon(Icons.add),
