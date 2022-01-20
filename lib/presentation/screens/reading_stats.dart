@@ -30,24 +30,32 @@ class ReadingStats extends StatelessWidget {
           const SizedBox(
             height: 10.0,
           ),
-          const Card(
-            elevation: 8.0,
-          ),
           Card(
-            child: Container(
-              height: 250,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                image: const DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/stack_of_books.png'),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: 200,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15.0),
+                    image: const DecorationImage(
+                      fit: BoxFit.contain,
+                      image: AssetImage('assets/images/stack_of_books.png'),
+                    ),
+                  ),
                 ),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text('You read 102 books!'),
-              ),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    'You read 102 books!',
+                    style: TextStyle(
+                      fontSize: 24.0,
+                    ),
+                  ),
+                ),
+              ],
             ),
             margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
           ),

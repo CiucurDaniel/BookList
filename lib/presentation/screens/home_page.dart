@@ -12,7 +12,9 @@ class HomePage extends StatelessWidget {
         title: const Text('Book list'),
         centerTitle: true,
       ),
-      body: const ReadingStats(),
+      body: const SafeArea(
+        child: ReadingStats(),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: const FloatingActionButton(
         child: Icon(Icons.add),
