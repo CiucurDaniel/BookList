@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:book_list/data/models/book.dart';
 import 'package:equatable/equatable.dart';
 
 part 'book_state.dart';
 
-class BookCubit extends Cubit<BookState> {
-  BookCubit() : super(BookInitial());
+class BooksCubit extends Cubit<BooksState> {
+  BooksCubit() : super(BooksInitial());
 }

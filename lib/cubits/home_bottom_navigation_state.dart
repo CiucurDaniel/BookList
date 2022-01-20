@@ -1,10 +1,14 @@
 part of 'home_bottom_navigation_cubit.dart';
 
-abstract class HomeBottomNavigationState extends Equatable {
-  const HomeBottomNavigationState();
-}
+enum Page { books, stats }
 
-class HomeBottomNavigationInitial extends HomeBottomNavigationState {
+class HomeBottomNavigationState extends Equatable {
+  const HomeBottomNavigationState({
+    this.currentTab = Page.books,
+  });
+
+  final Page currentTab;
+
   @override
-  List<Object> get props => [];
+  List<Object> get props => [currentTab];
 }
