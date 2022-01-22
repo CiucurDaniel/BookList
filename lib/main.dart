@@ -1,4 +1,5 @@
 import 'package:book_list/cubits/home_bottom_navigation_cubit.dart';
+import 'package:book_list/data/repositories/mock_book_repository.dart';
 import 'package:book_list/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,16 +15,8 @@ class BookListApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    // TODO: Wrap with RepositoryProvider when implemented
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<BooksCubit>(
-          create: (BuildContext context) => BooksCubit(),
-        ),
-        BlocProvider<HomeBottomNavigationCubit>(
-          create: (BuildContext context) => HomeBottomNavigationCubit(),
-        ),
-      ],
+    return RepositoryProvider(
+      create: (context) => MockBookRepository(),
       child: MaterialApp(
         title: 'Book List',
         theme: ThemeData(

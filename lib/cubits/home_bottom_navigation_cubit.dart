@@ -6,5 +6,7 @@ part 'home_bottom_navigation_state.dart';
 class HomeBottomNavigationCubit extends Cubit<HomeBottomNavigationState> {
   HomeBottomNavigationCubit() : super(const HomeBottomNavigationState());
 
-  void setTab(Page tab) => emit(HomeBottomNavigationState(currentTab: tab));
+  void setTab(HomeTab tab) => emit(
+        HomeBottomNavigationState(currentTab: tab),
+      );
 }
