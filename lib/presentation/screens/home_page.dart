@@ -24,62 +24,59 @@ class HomeView extends StatelessWidget {
       (HomeBottomNavigationCubit cubit) => cubit.state.currentTab,
     );
 
-    return BlocProvider(
-      create: (context) => HomeBottomNavigationCubit(),
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Book list'),
-          centerTitle: true,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Book list'),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: IndexedStack(
+          index: selectedTab.index,
+          children: const <Widget>[
+            BookList(),
+            ReadingStats(),
+          ],
         ),
-        body: SafeArea(
-          child: IndexedStack(
-            index: selectedTab.index,
-            children: const <Widget>[
-              BookList(),
-              ReadingStats(),
-            ],
-          ),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: const FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: null,
-        ),
-        bottomNavigationBar: BottomAppBar(
-          notchMargin: 8.0,
-          shape: const CircularNotchedRectangle(),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  IconButton(
-                    padding: const EdgeInsets.all(0),
-                    onPressed: () => context
-                        .read<HomeBottomNavigationCubit>()
-                        .setTab(HomeTab.books),
-                    icon: const Icon(Icons.home),
-                  ),
-                  const Text('Home'),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  IconButton(
-                    padding: const EdgeInsets.all(0),
-                    onPressed: () => context
-                        .read<HomeBottomNavigationCubit>()
-                        .setTab(HomeTab.stats),
-                    icon: const Icon(Icons.show_chart_rounded),
-                  ),
-                  const Text('Stats'),
-                ],
-              ),
-            ],
-          ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: const FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: null,
+      ),
+      bottomNavigationBar: BottomAppBar(
+        notchMargin: 8.0,
+        shape: const CircularNotchedRectangle(),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  padding: const EdgeInsets.all(0),
+                  onPressed: () => context
+                      .read<HomeBottomNavigationCubit>()
+                      .setTab(HomeTab.books),
+                  icon: const Icon(Icons.home),
+                ),
+                const Text('Home'),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  padding: const EdgeInsets.all(0),
+                  onPressed: () => context
+                      .read<HomeBottomNavigationCubit>()
+                      .setTab(HomeTab.stats),
+                  icon: const Icon(Icons.show_chart_rounded),
+                ),
+                const Text('Stats'),
+              ],
+            ),
+          ],
         ),
       ),
     );
