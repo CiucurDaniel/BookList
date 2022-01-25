@@ -10,5 +10,4 @@ abstract class IBookRepository {
   Future<void> editBook(Book b);
 
   Future<void> deleteBookById(int id);
-
 }
