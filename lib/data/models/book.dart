@@ -37,15 +37,4 @@ class Book {
       status: Status.values.byName(map['status']),
     );
   }
-
-  Status _convertStringToEnum(String status) {
-    if (status == 'read') {
-      return Status.read;
-    } else if (status == 'currentlyReading') {
-      return Status.currentlyReading;
-    } else {
-      // status == 'wantToRead'
-      return Status.wantToRead;
-    }
-  }
 }
