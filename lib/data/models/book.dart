@@ -1,23 +1,25 @@
+enum Status { read, wantToRead, currentlyReading }
+
 class Book {
   int? id;
   String title;
   String author;
   int pages;
-  bool isReaded;
+  Status status;
 
   Book(
       {this.id,
       required this.title,
       required this.author,
       required this.pages,
-      required this.isReaded});
+      required this.status});
 
   Map<String, Object?> toMap() {
     var map = <String, Object?>{
       'title': title,
       'author': author,
       'pages': pages.toString(),
-      'readed': isReaded ? 1 : 0,
+      'status': status.name,
     };
 
     if (id != null) {
@@ -32,7 +34,18 @@ class Book {
       title: map['title'],
       author: map['author'],
       pages: map['pages'],
-      isReaded: map['isReaded'] == '1' ? true : false,
+      status: Status.values.byName(map['status']),
     );
+  }
+
+  Status _convertStringToEnum(String status) {
+    if (status == 'read') {
+      return Status.read;
+    } else if (status == 'currentlyReading') {
+      return Status.currentlyReading;
+    } else {
+      // status == 'wantToRead'
+      return Status.wantToRead;
+    }
   }
 }
