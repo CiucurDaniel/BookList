@@ -7,12 +7,13 @@ class Book {
   int pages;
   Status status;
 
-  Book(
-      {this.id,
-      required this.title,
-      required this.author,
-      required this.pages,
-      required this.status});
+  Book({
+    this.id,
+    required this.title,
+    required this.author,
+    required this.pages,
+    required this.status,
+  });
 
   Map<String, Object?> toMap() {
     var map = <String, Object?>{
