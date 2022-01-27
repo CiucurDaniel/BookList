@@ -31,7 +31,7 @@ class DatabaseHelper {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
       author TEXT NOT NULL,
-      readed TEXT NOT NULL,
+      status TEXT NOT NULL,
       pages NUMBER NOT NULL
     )
     ''');
