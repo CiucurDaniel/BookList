@@ -38,4 +38,18 @@ class Book {
       status: Status.values.byName(map['status']),
     );
   }
+
+  Book copyWith({
+    String? id,
+    String? title,
+    String? author,
+    int? pages,
+    Status? status,
+  }) {
+    return Book(
+        title: title ?? this.title,
+        author: author ?? this.author,
+        pages: pages ?? this.pages,
+        status: status ?? this.status);
+  }
 }
