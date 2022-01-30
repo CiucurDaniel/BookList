@@ -24,8 +24,8 @@ lib
 │   ├───models
 │   └───repositories
 └───presentation
-├───screens
-└───widgets
+    ├───screens
+    └───widgets
 ```
 
 Following the architecture guides from the official [Bloc documentation](https://bloclibrary.dev/#/architecture), this project is split into 3 main layers.
