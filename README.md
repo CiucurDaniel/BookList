@@ -12,3 +12,21 @@ Booklist, your app for keeping track of the books you read and want to read. Cro
 The application is still at the initial development, however here is a small preview of how it looks.
 
 <img src="documentation/app_screenshots/current_state_of_application_0_1.PNG">
+
+# Project structure
+
+```
+lib
+├───cubits
+├───data
+│   ├───data_sources
+│   │   └───local
+│   ├───models
+│   └───repositories
+└───presentation
+├───screens
+└───widgets
+```
+
+Following the architecture guides from the official [Bloc documentation](https://bloclibrary.dev/#/architecture), this project is split into 3 main layers.
+We have the `Data layer` which has the `data sources` and the `repositories` as well as the `models` for the application. Next is the `Bussiness logic` layer which contains the Cubits/Blocs. And the last is the `Presentation` layer which contains the `screens` and the `widgets`.
