@@ -10,6 +10,8 @@ class BooksInitial extends BooksState {
 }
 
 class BooksLoading extends BooksState {
+  const BooksLoading();
+
   @override
   List<Object?> get props => [];
 }
@@ -21,4 +23,11 @@ class BooksLoaded extends BooksState {
 
   @override
   List<Object?> get props => [books];
+}
+
+class BooksLoadedWithError extends BooksState {
+  const BooksLoadedWithError();
+
+  @override
+  List<Object?> get props => [];
 }

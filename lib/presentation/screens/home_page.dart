@@ -33,7 +33,7 @@ class HomeView extends StatelessWidget {
       body: IndexedStack(
         index: selectedTab.index,
         children: const <Widget>[
-          BookList(),
+          BookListPage(),
           ReadingStats(),
         ],
       ),
