@@ -19,7 +19,7 @@ class BookItemCard extends StatelessWidget {
       Colors.green,
     ];
 
-    final _random =  Random();
+    final _random = Random();
 
     return Card(
       elevation: 8.0,
