@@ -1,13 +1,15 @@
+import 'package:equatable/equatable.dart';
+
 enum Status { read, wantToRead, currentlyReading }
 
-class Book {
-  int? id;
-  String title;
-  String author;
-  int pages;
-  Status status;
+class Book extends Equatable {
+  final int? id;
+  final String title;
+  final String author;
+  final int pages;
+  final Status status;
 
-  Book({
+  const Book({
     this.id,
     required this.title,
     required this.author,
@@ -52,4 +54,7 @@ class Book {
         pages: pages ?? this.pages,
         status: status ?? this.status);
   }
+
+  @override
+  List<Object?> get props => [id, title, author, pages, status];
 }
