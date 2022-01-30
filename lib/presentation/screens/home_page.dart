@@ -25,18 +25,17 @@ class HomeView extends StatelessWidget {
     );
 
     return Scaffold(
+      // TODO: AppBar has a bug on emulator where it has extra space above
       appBar: AppBar(
         title: const Text('Book list'),
         centerTitle: true,
       ),
-      body: SafeArea(
-        child: IndexedStack(
-          index: selectedTab.index,
-          children: const <Widget>[
-            BookList(),
-            ReadingStats(),
-          ],
-        ),
+      body: IndexedStack(
+        index: selectedTab.index,
+        children: const <Widget>[
+          BookList(),
+          ReadingStats(),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: const FloatingActionButton(
