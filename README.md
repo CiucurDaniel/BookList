@@ -30,3 +30,12 @@ lib
 
 Following the architecture guides from the official [Bloc documentation](https://bloclibrary.dev/#/architecture), this project is split into 3 main layers.
 We have the `Data layer` which has the `data sources` and the `repositories` as well as the `models` for the application. Next is the `Bussiness logic` layer which contains the Cubits/Blocs. And the last is the `Presentation` layer which contains the `screens` and the `widgets`.
+
+
+# TODO
+
+* [] Add new book screen
+* [] Edit book screen (reuse above mentioned screen)
+* [] Filter books by status
+* [] Delete book
+* [] Improve spacing on bottom navigation
