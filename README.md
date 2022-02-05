@@ -34,8 +34,13 @@ We have the `Data layer` which has the `data sources` and the `repositories` as 
 
 # TODO
 
-* [] Add new book screen
-* [] Edit book screen (reuse above mentioned screen)
-* [] Filter books by status
-* [] Delete book
-* [] Improve spacing on bottom navigation
+* [ ] Add new book screen
+* [ ] Edit book screen (reuse above mentioned screen)
+* [ ] Filter books by status
+* [ ] Delete book
+* [ ] Connect Status bloc to UI
+* [ ] Improve spacing on bottom navigation
+* [ ] Create a theme for the application
+* [ ] theme 1 part: text
+* [ ] theme 2 part: colors
+* [ ] theme 3 part: spacing and colors
