@@ -34,7 +34,7 @@ class HomeView extends StatelessWidget {
         index: selectedTab.index,
         children: const <Widget>[
           BookListPage(),
-          ReadingStats(),
+          ReadingStatsPage(),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

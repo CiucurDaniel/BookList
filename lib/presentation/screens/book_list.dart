@@ -33,11 +33,14 @@ class BookListView extends StatelessWidget {
           if (state is BooksLoading) {
             return const CircularProgressIndicator();
           } else if (state is BooksLoaded) {
-            return ListView.builder(
-              itemCount: state.books.length,
-              itemBuilder: (context, index) {
-                return BookItemCard(book: state.books[index]);
-              },
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 2.0),
+              child: ListView.builder(
+                itemCount: state.books.length,
+                itemBuilder: (context, index) {
+                  return BookItemCard(book: state.books[index]);
+                },
+              ),
             );
           } else {
             return Container(
