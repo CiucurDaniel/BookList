@@ -39,6 +39,24 @@ class MockBookRepository implements IBookRepository {
         author: 'Mosh Hamedamani',
         pages: 98,
         status: Status.wantToRead),
+    Book(
+        id: 7,
+        title: 'Docker for advanced users',
+        author: 'Mosh Hamedamani',
+        pages: 105,
+        status: Status.wantToRead),
+    Book(
+        id: 8,
+        title: 'Kubernetes',
+        author: 'Mosh Hamedamani',
+        pages: 98,
+        status: Status.wantToRead),
+    Book(
+        id: 9,
+        title: 'Java for begginers',
+        author: 'Mosh Hamedamani',
+        pages: 65,
+        status: Status.currentlyReading),
   ];
 
   @override
