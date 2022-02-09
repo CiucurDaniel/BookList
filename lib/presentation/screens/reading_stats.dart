@@ -37,14 +37,14 @@ class ReadingStatsView extends StatelessWidget {
           return Column(
             children: <Widget>[
               StatsCard(
-                  primaryStatsNumber: 102.toString(),
+                  primaryStatsNumber: state.bookWantingToRead.toString(),
                   statsText: 'books you want to read!',
                   imagePath: 'assets/images/creative_color_book.png'),
               const SizedBox(
                 height: 10.0,
               ),
               StatsCard(
-                  primaryStatsNumber: 52.toString(),
+                  primaryStatsNumber: state.bookRead.toString(),
                   statsText: 'books read!',
                   imagePath: 'assets/images/stack_of_books.png'),
             ],

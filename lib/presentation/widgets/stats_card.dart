@@ -28,7 +28,7 @@ class StatsCard extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(32.0),
                 child: Text(
                   primaryStatsNumber,
                   style: const TextStyle(fontSize: 48.0),
