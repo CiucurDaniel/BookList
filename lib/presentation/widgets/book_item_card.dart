@@ -21,15 +21,18 @@ class BookItemCard extends StatelessWidget {
 
     final _random = Random();
 
-    return Card(
-      elevation: 8.0,
-      child: ListTile(
-        leading: Icon(
-          Icons.menu_book,
-          color: _colors[_random.nextInt(_colors.length)],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: Card(
+        elevation: 8.0,
+        child: ListTile(
+          leading: Icon(
+            Icons.menu_book,
+            color: _colors[_random.nextInt(_colors.length)],
+          ),
+          title: Text(book.title),
+          subtitle: Text(book.author),
         ),
-        title: Text(book.title),
-        subtitle: Text(book.author),
       ),
     );
   }
