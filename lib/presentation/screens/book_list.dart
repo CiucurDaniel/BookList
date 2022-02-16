@@ -31,7 +31,9 @@ class BookListView extends StatelessWidget {
       child: BlocBuilder<BooksCubit, BooksState>(
         builder: (context, state) {
           if (state is BooksLoading) {
-            return const CircularProgressIndicator();
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
           } else if (state is BooksLoaded) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 2.0),
