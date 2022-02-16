@@ -1,3 +1,4 @@
+import 'package:book_list/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:book_list/data/models/book.dart';
 import 'dart:math';
@@ -32,6 +33,12 @@ class BookItemCard extends StatelessWidget {
           ),
           title: Text(book.title),
           subtitle: Text(book.author),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BookDetails(book: book,)),
+            );
+          },
         ),
       ),
     );
