@@ -38,6 +38,7 @@ We have the `Data layer` which has the `data sources` and the `repositories` as 
 * [ ] Edit book screen (reuse above mentioned screen)
 * [ ] Filter books by status
 * [ ] Delete book
+* [ ] Details page
 * [x] Connect Status bloc to UI
 * [ ] Improve spacing on bottom navigation
 * [ ] Create a theme for the application
