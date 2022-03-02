@@ -28,7 +28,9 @@ class BookDetails extends StatelessWidget {
                 Text(book.title),
               ],
             ),
-            const SizedBox(height: 16.0,),
+            const SizedBox(
+              height: 16.0,
+            ),
             Row(
               children: <Widget>[
                 const Expanded(
@@ -37,7 +39,9 @@ class BookDetails extends StatelessWidget {
                 Text(book.author),
               ],
             ),
-            const SizedBox(height: 16.0,),
+            const SizedBox(
+              height: 16.0,
+            ),
             Row(
               children: <Widget>[
                 const Expanded(
@@ -48,7 +52,9 @@ class BookDetails extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 16.0,),
+            const SizedBox(
+              height: 16.0,
+            ),
             Row(
               children: <Widget>[
                 const Expanded(
@@ -59,7 +65,9 @@ class BookDetails extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 16.0,),
+            const SizedBox(
+              height: 16.0,
+            ),
             Row(
               children: const <Widget>[
                 ElevatedButton(
