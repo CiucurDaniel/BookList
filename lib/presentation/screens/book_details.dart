@@ -55,7 +55,7 @@ class BookDetails extends StatelessWidget {
                   child: Text('Status: '),
                 ),
                 Text(
-                  book.status.toString(),
+                  book.status.simpleToString(),
                 ),
               ],
             ),

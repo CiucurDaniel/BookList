@@ -2,6 +2,21 @@ import 'package:equatable/equatable.dart';
 
 enum Status { read, wantToRead, currentlyReading }
 
+extension StatusExtension on Status {
+  String simpleToString() {
+    switch (this) {
+      case Status.read:
+        return 'read';
+      case Status.wantToRead:
+        return 'Want to read';
+      case Status.currentlyReading:
+        return 'Currently reading';
+      default:
+        return 'Unknown';
+    }
+  }
+}
+
 class Book extends Equatable {
   final int? id;
   final String title;
