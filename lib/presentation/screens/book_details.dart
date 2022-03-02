@@ -74,7 +74,7 @@ class BookDetails extends StatelessWidget {
                   onPressed: null,
                   child: Text('Edit'),
                 ),
-                FlatButton(
+                TextButton(
                   onPressed: null,
                   child: Text('Delete book'),
                 ),
