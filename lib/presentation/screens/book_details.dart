@@ -66,9 +66,10 @@ class BookDetails extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 16.0,
+              height: 32.0,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
                 ElevatedButton(
                   onPressed: null,
@@ -76,7 +77,10 @@ class BookDetails extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: null,
-                  child: Text('Delete book'),
+                  child: Text(
+                    'Delete',
+                    style: TextStyle(color: Colors.redAccent),
+                  ),
                 ),
               ],
             ),
